@@ -1,11 +1,3 @@
-//
-//  Logs.swift
-//  Optima24
-//
-//  Created by RPS on 6/14/19.
-//  Copyright © 2019 RPS. All rights reserved.
-//
-
 import Foundation
 
 class Logs {

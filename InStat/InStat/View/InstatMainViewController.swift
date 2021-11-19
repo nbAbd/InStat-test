@@ -73,7 +73,6 @@ class InstatMainViewController: BaseViewController {
         var frame = CGRect.zero
         frame.size.height = .leastNormalMagnitude
         tableView.tableFooterView = UIView(frame: frame)
-        tableView.tableHeaderView = UIView(frame: frame)
     }
     
     func configure(data: MatchData) {
@@ -111,21 +110,13 @@ class InstatMainViewController: BaseViewController {
         )
     }
     
-    func playVideo(url: String, tryAnother: Bool = false) {
+    func playVideo(url: String) {
         let videoUrl = URL(string: url)
         let player = AVPlayer(url: videoUrl!)
-        
-        if tryAnother {
-            let playerViewController = AVPlayerViewController()
-            playerViewController.player = player
-            self.present(playerViewController, animated: true) {
-                playerViewController.player?.play()
-            }
-        } else {
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.view.bounds
-            self.view.layer.addSublayer(playerLayer)
-            player.play()
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player?.play()
         }
     }
 }
@@ -189,7 +180,7 @@ extension InstatMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.playVideo(url: videos[indexPath.row].url ?? "", tryAnother: true)
+        self.playVideo(url: videos[indexPath.row].url ?? "")
         print(indexPath.row)
     }
 }
