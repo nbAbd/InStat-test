@@ -504,7 +504,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/xector/Desktop/iOS Projects/InStat-test/InStat/InStat/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "${TARGET_NAME}/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = InStat;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -535,7 +535,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/xector/Desktop/iOS Projects/InStat-test/InStat/InStat/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "${TARGET_NAME}/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = InStat;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
